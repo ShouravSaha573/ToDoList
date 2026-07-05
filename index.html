@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-wrap">
+        <section class="task-board">
+            <div class="corner-note">
+                <span>Stay Focused</span>
+                <span>Get Things Done!</span>
+            </div>
+
+            <header class="header-section">
+                <h1><span class="target-icon">◎</span><span>To-Do List</span></h1>
+                <div class="small-line"></div>
+                <p>Add, track, complete and delete your tasks.</p>
+            </header>
+
+            <aside class="stats-card" aria-label="Task statistics">
+                <div class="stat-row">
+                    <span class="stat-icon blue">▦</span>
+                    <span>Total Tasks</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-icon green">✓</span>
+                    <span>Completed</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-icon amber">◷</span>
+                    <span>Pending</span>
+                    <strong id="pendingTasks">0</strong>
+                </div>
+            </aside>
+
+            <section class="input-panel" aria-label="Add task form">
+                <div class="input-icon">✎</div>
+                <input type="text" id="taskInput" placeholder="Type a new task...">
+                <button id="addTaskBtn" type="button">+ Add Task</button>
+            </section>
+
+            <p id="messageBox" class="message-box"></p>
+
+            <section class="task-area">
+                <div class="section-title">
+                    <span class="grid-icon">▦</span>
+                    <h2>Task Wall</h2>
+                </div>
+
+                <ul id="taskList" class="task-list" aria-label="Task list"></ul>
+            </section>
+
+            <footer class="save-note">
+                <span class="shield">◇</span>
+                <p>Your tasks are saved automatically using <b>localStorage</b>. They will remain even after refreshing the page.</p>
+                <span class="bookmark">▰</span>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
